@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  - var results = shoes;
+  div(class="container_fluid")
+    each item in results
+        div(class="row")       
+            div(class="col-sm-2") #{item.shoes_type}
+            div(class="col-sm-2") #{item.shoes_name}
+            div(class="col-sm-2") #{item.shoes_cost}
